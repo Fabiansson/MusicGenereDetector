@@ -1,1 +1,1 @@
-# MusicGenereDetector
+# MusicGenreDetector
