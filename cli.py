@@ -10,6 +10,7 @@ if __name__ == "__main__":
         exit()
 
     from predicter import eval  # import not before here because of loading time
+
     path = sys.argv[1:][0]
 
     if path.startswith('http'):
