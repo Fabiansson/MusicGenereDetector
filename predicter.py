@@ -66,7 +66,7 @@ def genre_mapping(index):
 def normalize_data(song):
     # Normalize
     # we need to load training_data to normalize new data accordingly
-    data = pd.read_csv('features_with_var_parentlabels.csv')
+    data = pd.read_csv('./data/features_with_var_parentlabels.csv')
     data = data.drop(['filename', 'label'], axis=1)
     data = data.append(song)
 

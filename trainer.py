@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 from keras import models
 from keras import layers
 
-data = pd.read_csv('features_with_var_parentlabels.csv')
+data = pd.read_csv('./data/features_with_var_parentlabels.csv')
 
 # Dropping unnecessary columns
 data = data.drop(['filename'], axis=1)

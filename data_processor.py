@@ -65,7 +65,7 @@ def featurize(filename):
 if __name__ == "__main__":
     print("Creating csv..")
 
-    output = 'features.csv'
+    output = './data/features.csv'
     header = 'filename chroma_stft chroma_stft_var rmse rmse_var spectral_centroid spectral_centroid_var ' \
              'spectral_bandwidth spectral_bandwith_var rolloff rolloff_var zero_crossing_rate zero_crossing_rate_var '
     for i in range(1, 21):
