@@ -9,7 +9,14 @@ warnings.filterwarnings('ignore')
 
 # "C:\Users\Fabian\Documents\GitHub\MusicGenreDetector\Britney Spears - 3.mp3"
 if __name__ == "__main__":
-    print('MUSIC-GENRE-DETECTOR'.center(40, '#'))
+    title = '''  __  __           _       _____                     _____       _            _                    __   ___  
+ |  \/  |         (_)     / ____|                   |  __ \     | |          | |                  /_ | / _ \ 
+ | \  / |_   _ ___ _  ___| |  __  ___ _ __  _ __ ___| |  | | ___| |_ ___  ___| |_ ___  _ __  __   _| || | | |
+ | |\/| | | | / __| |/ __| | |_ |/ _ \ '_ \| '__/ _ \ |  | |/ _ \ __/ _ \/ __| __/ _ \| '__| \ \ / / || | | |
+ | |  | | |_| \__ \ | (__| |__| |  __/ | | | | |  __/ |__| |  __/ ||  __/ (__| || (_) | |     \ V /| || |_| |
+ |_|  |_|\__,_|___/_|\___|\_____|\___|_| |_|_|  \___|_____/ \___|\__\___|\___|\__\___/|_|      \_/ |_(_)___/ 
+'''
+    print(title)
     print('by Daniel Zimmermann, Thomas Burri, Fabian Zbinden'.center(10, '_'))
     if len(sys.argv[1:]) == 0:
         print("Enter the path to your mp3 file or URL from youtube as parameter")
