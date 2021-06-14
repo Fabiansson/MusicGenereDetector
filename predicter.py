@@ -11,14 +11,17 @@ parts = 0
 
 
 def load_song(path):
+    print("Loading file...")
     y, sr = librosa.load(path, mono=True)
     duration = librosa.get_duration(y)
 
     global parts
     parts = math.floor(duration / 30.0)
+    print("Song has a duration of {} seconds. Splitting into {} parts (30s)...".format(math.floor(duration), parts))
 
     song_data = []
     for part in range(parts):
+        print("Extracting features for part {} of {}...".format(part+1, parts))
         y, sr = librosa.load(path, mono=True, offset=part * 30, duration=30)
         chroma_stft = librosa.feature.chroma_stft(y=y, sr=sr)
         spec_cent = librosa.feature.spectral_centroid(y=y, sr=sr)
@@ -64,6 +67,7 @@ def genre_mapping(index):
 
 
 def normalize_data(song):
+    print('Normalizing features...')
     # Normalize
     # we need to load training_data to normalize new data accordingly
     data = pd.read_csv('./data/features_with_var_parentlabels.csv')
@@ -75,6 +79,7 @@ def normalize_data(song):
 
 
 def predict(X):
+    print('Predict...')
     # Load Model
     model = keras.models.load_model('music_genre_detector_model')
 
@@ -85,6 +90,7 @@ def predict(X):
         part_predictions.append(np.argmax(predictions[len(predictions) - (prt + 1)]))
 
     counted = Counter(part_predictions)
+    print('RESULT'.center(40, '#'))
     for key in counted:
         print(str(genre_mapping(key)) + ': ' + str(counted[key] / len(part_predictions) * 100) + '%')
 

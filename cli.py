@@ -1,9 +1,16 @@
+#!/usr/bin/python
 from youtube import download_yt
 import sys
+import warnings
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
+warnings.filterwarnings('ignore')
 
 # "C:\Users\Fabian\Documents\GitHub\MusicGenreDetector\Britney Spears - 3.mp3"
 if __name__ == "__main__":
-    # path = input("Enter the path to your mp3 file or URL from youtube:")
+    print('MUSIC-GENRE-DETECTOR'.center(40, '#'))
+    print('by Daniel Zimmermann, Thomas Burri, Fabian Zbinden'.center(10, '_'))
     if len(sys.argv[1:]) == 0:
         print("Enter the path to your mp3 file or URL from youtube as parameter")
         print("Use filename or full path for local files.")
@@ -13,7 +20,5 @@ if __name__ == "__main__":
 
     path = sys.argv[1:][0]
 
-    if path.startswith('http'):
-        print('yes')
-
     eval(download_yt(path)) if path.startswith('http') else eval(path)
+    input("Press any key to exit...")
