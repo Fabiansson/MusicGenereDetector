@@ -40,3 +40,12 @@ Das CLI dient zur einfachen Bedienung des Programms. Man kann ein Filepath oder 
   <img src="https://i.postimg.cc/q7nWZ9dY/1.png" width="800" />
 </p>
 
+# Benutzung
+Um den MusicGenreDetector zu nutzen, müssen alle Dependencies installiert werden:
+
+`pip install -r requirements.txt`
+
+Das Modell muss nicht mehr traniert werden, da es bereits im Repository vorhanden ist.
+Danach kann das CLI ganz einfach mit beispielsweise einem YouTube-Link ausgeführt werden:
+
+`python cli.py https://www.youtube.com/watch?v=pRpeEdMmmQ0`
