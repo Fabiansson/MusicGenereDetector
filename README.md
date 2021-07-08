@@ -38,6 +38,7 @@ Das CLI dient zur einfachen Bedienung des Programms. Man kann ein Filepath oder 
 <p float="left">
   <img src="https://i.postimg.cc/q7nWZ9dY/1.png" width="800" />
 </p>
+
 ## Beispiel Klassifikation
 <p float="left">
   <img src="https://i.postimg.cc/QMfSS34h/Beispiel.png" width="400" />
