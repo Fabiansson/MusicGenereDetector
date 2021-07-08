@@ -8,6 +8,7 @@
 </p>
 
 DeepLearning Modul, FFHS 2021
+
 Daniel Zimmermann, Thomas Burri, Fabian Zbinden
 
 # Projektbeschreibung
