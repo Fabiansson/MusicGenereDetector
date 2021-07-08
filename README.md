@@ -3,10 +3,8 @@
 <br />
 <p align="center">
   <a href="https://github.com/Fabiansson/MusicGenreDetector">
-    
+    <img src="https://i.postimg.cc/L6YDTjSQ/logo.png" width="800" />
   </a>
-
-  <h3 align="center">MusicGenreDetector</h3>
 </p>
 
 
@@ -37,4 +35,8 @@ Zum Schluss wird das Netz mit 100 Epochen trainiert und das Model abgespeichert.
 Im File predicter.py wird das trainierte Netzt verwendet, um andere Songs nach dem Genre zu klassifizieren. Dabei gehen wir ähnlich vor wie im data_processor, wobei wir einen bestimmten Song einlesen und wieder mit Librosa eine Feature-Extraktion machen. Wichtig hierbei ist, da wir das Netz mit Songs von der Länge von 30 Sekunden trainiert haben, dass unser Input-Song auch diese Länge aufweist. Dies ist natürlich nicht immer gegeben. Um diesem Problem aus dem Weg zu gehen, spliten wir den Song in mehrere Teile, welche jeweils 30 Sekunden lang sind und lesen die Features aus diesen Teilen aus. Die Trainingsdaten werden erneut eingelesen und die zu klassifizierenden Song-Teile am Schluss angehängt. Dies ist nötig um die Feature-Values in Zusammmenhang zu den Trainings-Values zu bringen und eine Normalisation zu machen. Im Anschluss wird das trainierte Model geladen und eine Prediction für alle Parts ausgeführt. Dabei erhalten wir für jeden Part ein Genre. Die Genres werden aufsummiert und die höchste Summe entspricht dem Genre des ganzen Songs.
 ## cli.py
 Das CLI dient zur einfachen Bedienung des Programms. Man kann ein Filepath oder eine YouTube-URL eingeben. Im Anschluss wird der Song gegebenenfalls von YouTube heruntergelesen und klassifiziert.
+
+<p float="left">
+  <img src="https://i.postimg.cc/q7nWZ9dY/1.png" width="800" />
+</p>
 
