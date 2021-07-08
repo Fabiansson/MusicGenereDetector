@@ -34,6 +34,7 @@ Im File predicter.py wird das trainierte Netzt verwendet, um andere Songs nach d
 ## cli.py
 Das CLI dient zur einfachen Bedienung des Programms. Man kann ein Filepath oder eine YouTube-URL eingeben. Im Anschluss wird der Song gegebenenfalls von YouTube heruntergelesen und klassifiziert.
 
+# Resultat
 <p float="left">
   <img src="https://i.postimg.cc/q7nWZ9dY/1.png" width="800" />
 </p>
