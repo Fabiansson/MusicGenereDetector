@@ -26,7 +26,7 @@ Link zum Trello-Board mit den Aufgaben:(https://trello.com/invite/b/IzMeQyMZ/efc
 # Technische Beschreibung
 Das Projekt wurde mit Python geschrieben und lässt sich grundsätzlich in vier Teile unterteilen.
 ## data_processor.py
-Im File data_processor.py findet hauptsächlich die Feature-Extraktion bei den mp3-Dateien aus dem Datensatz statt. Dazu wird ein trackgenremapping.xlsx eingelsen wobei dieses jedem Song ein bestimmtes Label zuweist. Danach wird mittels Librosa die Featureextraktion gemacht und so ein CSV erstellt (features_with_var_parentlabels.csv). Dabei erhalten wir eine Liste aller Songs und deren Features. Ausserdem werden die Anzahl Labels auf 8 Genres reduziert.
+Im File data_processor.py findet hauptsächlich die Feature-Extraktion bei den mp3-Dateien aus dem Datensatz statt. Dazu wird ein trackgenremapping.xlsx eingelsen wobei dieses jedem Song ein bestimmtes Label zuweist. Danach wird mittels Librosa die Featureextraktion gemacht und so ein CSV erstellt (features_with_var_parentlabels.csv). Dabei erhalten wir eine Liste aller Songs und deren Features. Ausserdem werden die Anzahl Labels auf die 8 Parent-Genres reduziert.
 ## trainer.py
 Im File trainer.py können die ausgelsenene Songs inkl. Features wider eingelesen werden und das eigentliche Erstellen und Trainieren des Netzes beginnt hier. Es wird ein LabelEncoder verwendet, der die Lables aus der letzten Spalte einliest und darauf folgend werden alle Feature-Values normiert mit Hilfe eines StandartScalers. Danach wird das Datenset aufgeteilt in Trainings- und Testdaten in einem Verhältnis von 70% und 30%.
 
